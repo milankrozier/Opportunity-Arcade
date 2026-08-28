@@ -21,7 +21,7 @@ export default function Organizations() {
             </h3>
             <div style={{ flex: 1, height: 1, background: 'var(--border-default)' }} />
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 380px))', gap: 24 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 360px))', gap: 24 }}>
             {group.items.map((org) => (
               <a key={org.name} href={org.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
                 <InstitutionCard location={org.kind} name={org.name} description={org.description} />

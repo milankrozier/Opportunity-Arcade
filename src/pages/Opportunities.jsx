@@ -51,7 +51,7 @@ export default function Opportunities() {
       </div>
 
       {hasResults ? (
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 380px))', gap: 24, marginTop: 24 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 360px))', gap: 24, marginTop: 24 }}>
           {filteredOpportunities.map((opp) => (
             <a key={opp.title} href={opp.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
               <OpportunityCard
