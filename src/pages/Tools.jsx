@@ -78,11 +78,11 @@ export default function Tools() {
       {hasToolResults ? (
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 20, marginTop: 24 }}>
           {filteredTools.map((tool) => (
-            <div key={tool.name} style={{ border: '1px solid var(--border-default)', borderRadius: 'var(--radius-2xl)', background: 'var(--white)', padding: 24, height: '100%', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: 16 }}>
+            <a key={tool.name} href={tool.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit', border: '1px solid var(--border-default)', borderRadius: 'var(--radius-2xl)', background: 'var(--white)', padding: 24, height: '100%', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: 16 }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-                <a href={tool.link} target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-display)', fontWeight: 'var(--weight-bold)', fontSize: 'var(--text-xl)', color: 'var(--text-heading)', textDecoration: 'none', lineHeight: 'var(--leading-tight)' }}>
+                <span style={{ fontFamily: 'var(--font-display)', fontWeight: 'var(--weight-bold)', fontSize: 'var(--text-xl)', color: 'var(--text-heading)', lineHeight: 'var(--leading-tight)' }}>
                   {tool.name}
-                </a>
+                </span>
                 <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', alignItems: 'center' }}>
                   <Badge tone={tool.costTone}>{tool.cost}</Badge>
                   <Badge tone={tool.skillTone}>{tool.skill}</Badge>
@@ -106,7 +106,7 @@ export default function Tools() {
                   </span>
                 ))}
               </div>
-            </div>
+            </a>
           ))}
         </div>
       ) : (
